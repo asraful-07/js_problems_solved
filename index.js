@@ -1,6 +1,6 @@
 // problem 1 
 function calculateMoney(ticketSale){
-    if(ticketSale < 0){
+    if(ticketSale < 0  || typeof ticketSale !== 'number'){
         return 'Invalid number'
     }
 

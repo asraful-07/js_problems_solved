@@ -12,5 +12,5 @@ function pasaword(obj){
 }
 
 console.log(pasaword({name: 'hlkdhs', birthYear: 1999, siteName: 'google'}));
-console.log(pasaword({name: 'ikguiy', birthYear: 1999, siteName: 'google'}));
-console.log(pasaword({name: 'toky', birthYear: 200, siteName: 'facebook'}));
+// console.log(pasaword({name: 'ikguiy', birthYear: 1999, siteName: 'google'}));
+// console.log(pasaword({name: 'toky', birthYear: 200, siteName: 'facebook'}));
