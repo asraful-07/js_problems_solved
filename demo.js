@@ -1,16 +1,37 @@
-const users = [
-    { username: "john_doe", domain: "example.com" },
-    { username: "jane_smith", domain: "anotherdomain.com" },
-    { username: "bob_jones", domain: "yetanotherdomain.com" }
-];
+function calculateFinalScore(obj) {
+    if(typeof obj !== "object" || obj === null || Array.isArray(obj)) {
+        return "Invalid Input";
+    }
+    const { name, testScore, schoolGrade, isFFamily } = obj;
 
-const messages = [];
+    if (typeof name !== 'string' || typeof testScore !== 'number' || typeof schoolGrade !== 'number' 
+        || typeof isFFamily !== 'boolean') {
+        return 'Scores are out of bounds';
+    }
 
-for (const user of users) {
-    const { username, domain } = user;
-    const message = `${username} sent you an email from ${domain}`;
-    messages.push(message);
+    if (testScore > 50 || schoolGrade > 30 || testScore < 0 || schoolGrade < 0) {
+        return 'Scores are out of bounds';
+    }
+   
+    let finalScore = testScore + schoolGrade;
+
+    if (isFFamily) {
+        finalScore += 20;
+    }
+    
+    return finalScore >= 80;
 }
 
-console.log(messages);
+
+const rajivData = {
+    name: "Rajiv",
+    testScore: 45,         
+    schoolGrade: 25,    
+    isFFamily: true
+};
+
+const result = calculateFinalScore(rajivData);
+console.log(result);  
+console.log(calculateFinalScore("hello"));
+console.log(calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : false}));
 
