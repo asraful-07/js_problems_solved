@@ -1,10 +1,10 @@
-function waitingTime(interviewTimes, serialNumber) {
-    if (!Array.isArray(interviewTimes) || typeof serialNumber !== 'number') {
+function waitingTime(waitingTimes, serialNumber) {
+    if (!Array.isArray(waitingTimes) || typeof serialNumber !== 'number') {
         return "Invalid Input";
     }
     // Step 1: Calculate the average interview time (rounded)
-    const totalInterviews = interviewTimes.length;
-    const totalTime = interviewTimes.reduce((sum, time) => sum + time, 0);
+    const totalInterviews = waitingTimes.length;
+    const totalTime = waitingTimes.reduce((sum, time) => sum + time, 0);
     const averageTime = Math.round(totalTime / totalInterviews);
 
     // Step 2: Calculate how many people are left before Israt
@@ -18,11 +18,12 @@ function waitingTime(interviewTimes, serialNumber) {
 }
 
 // Example usage:
-const interviewTimes = [5, 7, 6, 8, 4];  // Interview times of those who have already had viva
+const waitingTimes = [5, 7, 6, 8, 4];  // Interview times of those who have already had viva
 const serialNumber = 10;  // Israt's serial number
 
-const result = waitingTime(interviewTimes, serialNumber);
+const result = waitingTime(waitingTimes, serialNumber);
 console.log(result);  // Output: 24 (as there are 4 people left before Israt, and average time is 6 minutes)
 console.log(waitingTime([13, 2], 6));
+console.log(waitingTime([6], 4));
 console.log(waitingTime(7 , 10));
 console.log(waitingTime([7, 8, 3, 4, 5], "9"));
