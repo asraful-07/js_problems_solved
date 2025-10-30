@@ -1,16 +1,17 @@
-function checkDigitsInName(name) {
-  if (typeof name !== "string" || Array.isArray(name)) {
-    return "Invalid Input";
+function Inerr() {
+  let count = 0;
+
+  function outer() {
+    count++;
+    console.log("Count is:", count);
   }
 
-  for (let i = 0; i < name.length; i++) {
-    if (!isNaN(name[i]) && name[i] !== " ") {
-      return "true";
-    }
-  }
-
-  return "false";
+  return outer;
 }
 
-const result = checkDigitsInName("Raju123");
-console.log(result);
+const callFunc = Inerr();
+
+callFunc(); // output: Count is: 1
+callFunc(); // output: Count is: 2
+callFunc(); // output: Count is: 3
+callFunc(); // output: Count is: 4
