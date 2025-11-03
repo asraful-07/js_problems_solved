@@ -1,11 +1,15 @@
-let num = [10, 26, 8, 18, 9, 56, 89, 34, 10];
+const postsArray = [
+  { id: "p-101", title: "Intro to SQL", author: "Alex" },
+  { id: "p-102", title: "Data Structures in JS", author: "Beth" },
+  { id: "p-103", title: "Understanding Reduce", author: "Chris" },
+  { id: "p-104", title: "CSS Grid Tricks", author: "Alex" },
+];
 
-let x = [];
-
-for (let i = num.length - 1; i >= 0; i--) {
-  if (num[i] % 2 == 0) {
-    x.push(num[i]);
+const uniqueAuthors = postsArray.reduce((acc, cur) => {
+  if (!acc.includes(cur.author)) {
+    acc.push(cur.author);
   }
-}
+  return acc;
+}, []);
 
-console.log(x);
+console.log(uniqueAuthors);
