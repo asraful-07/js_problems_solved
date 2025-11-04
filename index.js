@@ -4,7 +4,7 @@ const postsArray = [
   { id: "p-103", title: "Understanding Reduce", author: "Chris" },
   { id: "p-104", title: "CSS Grid Tricks", author: "Alex" },
 ];
-
+// array problem
 const uniqueAuthors = postsArray.reduce((acc, cur) => {
   if (!acc.includes(cur.author)) {
     acc.push(cur.author);
