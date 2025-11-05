@@ -1,4 +1,4 @@
-function word(num: string): number {
+function word1(num: string): number {
   const vowel = "aeiouAEIOU";
   let count = 0;
 
@@ -10,4 +10,4 @@ function word(num: string): number {
   return count;
 }
 
-console.log(word("BangladeshI"));
+console.log(word1("BangladeshI"));
