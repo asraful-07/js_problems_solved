@@ -1,13 +1,11 @@
-function word3(num: string): number {
-  const vowel = "aeiouAEIOU";
-  let count = 0;
-
-  for (let i = 0; i < num.length; i++) {
-    if (vowel.includes(num[i])) {
-      count++;
-    }
+function getLength(value: string | any[]): number {
+  if (typeof value === "string") {
+    return value.length;
   }
-  return count;
-}
 
-console.log(word3("BangladeshI"));
+  if (Array.isArray(value)) {
+    return value.length;
+  }
+
+  return 0;
+}

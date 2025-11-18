@@ -1,13 +1,5 @@
-function word6(num: string): number {
-  const vowel = "aeiouAEIOU";
-  let count = 0;
-
-  for (let i = 0; i < num.length; i++) {
-    if (vowel.includes(num[i])) {
-      count++;
-    }
-  }
-  return count;
+function filterActiveUsers(
+  users: { id: number; name: string; email: string; isActive: boolean }[]
+): { id: number; name: string; email: string; isActive: boolean }[] {
+  return users.filter((user) => user.isActive === true);
 }
-
-console.log(word6("BangladeshI"));

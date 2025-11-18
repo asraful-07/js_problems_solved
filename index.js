@@ -1,12 +1,21 @@
-function countOccurrences(arr, n, x) {
-  let res = 0;
-  for (let i = 0; i < n; i++) {
-    if (x == arr[i]) res++;
+function countOccurrences(arr) {
+  let res = arr.split(" ");
+  let count = " ";
+
+  for (let char of res) {
+    if (char.length > count.length) {
+      count = char;
+    }
   }
-  return res;
+  //   for (let i = 0; i < res.length; i++) {
+  //     if (res[i].length > count.length) {
+  //       count = res[i];
+  //     }
+  //   }
+  return count;
 }
 
-arr = [5, 6, 11, 12, 98, 5];
-let n = arr.length;
-let x = 2;
-console.log(countOccurrences(arr, n, x));
+// let str = arr.includes
+let arr = "hello engineer how are you ABCD";
+// let x = "";
+console.log(countOccurrences(arr));

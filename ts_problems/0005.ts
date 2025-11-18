@@ -1,13 +1,5 @@
-function word5(num: string): number {
-  const vowel = "aeiouAEIOU";
-  let count = 0;
-
-  for (let i = 0; i < num.length; i++) {
-    if (vowel.includes(num[i])) {
-      count++;
-    }
-  }
-  return count;
+function filterByRating(
+  items: { title: string; rating: number }[]
+): { title: string; rating: number }[] {
+  return items.filter((item) => item.rating >= 4);
 }
-
-console.log(word5("BangladeshI"));

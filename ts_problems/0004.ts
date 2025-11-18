@@ -1,13 +1,13 @@
-function word4(num: string): number {
-  const vowel = "aeiouAEIOU";
-  let count = 0;
+class Person {
+  private name: string;
+  private age: number;
 
-  for (let i = 0; i < num.length; i++) {
-    if (vowel.includes(num[i])) {
-      count++;
-    }
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
   }
-  return count;
-}
 
-console.log(word4("BangladeshI"));
+  getDetails(): string {
+    return `'Name: ${this.name}, Age: ${this.age}'`;
+  }
+}
