@@ -19,3 +19,4 @@ function countOccurrences(arr) {
 let arr = "hello engineer how are you ABCD";
 // let x = "";
 console.log(countOccurrences(arr));
+console.log(countOccurrences(arr));
