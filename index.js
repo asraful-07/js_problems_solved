@@ -20,17 +20,16 @@ let arr = "hello engineer how are you ABCD";
 // let x = "";
 // console.log(countOccurrences(arr));
 
-const globalVar = "Global";
+// Event loop working good
 
-function outer() {
-  const outerVar = "Outer";
+console.log("Start");
 
-  function inner() {
-    console.log(globalVar);
-    console.log(outerVar);
-  }
+setTimeout(() => {
+  console.log("setTimeout");
+}, 0);
 
-  inner();
-}
+Promise.resolve().then(() => {
+  console.log("Promise");
+});
 
-outer();
+console.log("End");
