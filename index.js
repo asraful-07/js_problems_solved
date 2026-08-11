@@ -20,7 +20,7 @@ let arr = "hello engineer how are you ABCD";
 // let x = "";
 // console.log(countOccurrences(arr));
 
-// Event loop  working good
+// Event loop
 
 console.log("Start");
 
