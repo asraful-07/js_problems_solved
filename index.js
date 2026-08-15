@@ -33,16 +33,3 @@ Promise.resolve().then(() => {
 });
 
 console.log("End");
-
-const sentence = "I am learning Programming to become a programmer";
-
-let str = sentence.split(" ");
-let longest = "";
-
-for (let word of str) {
-  if (word.length > longest.length) {
-    longest = word;
-  }
-}
-
-console.log(longest);
