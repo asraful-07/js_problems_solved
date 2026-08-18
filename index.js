@@ -18,7 +18,7 @@ function countOccurrences(arr) {
 // let str = arr.includes
 let arr = "hello engineer how are you ABCD";
 // let x = "";
-// console.log(countOccurrences(arr));
+console.log(countOccurrences(arr));
 
 // Event loop working good
 
