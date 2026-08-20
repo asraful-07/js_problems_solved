@@ -16,7 +16,7 @@ function countOccurrences(arr) {
 }
 
 // let str = arr.includes
-let arr = "hello engineer how are you ABCD";
+// let arr = "hello engineer how are you ABCD";
 // let x = "";
 console.log(countOccurrences(arr));
 
