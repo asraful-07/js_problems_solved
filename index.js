@@ -1,35 +1,13 @@
-function countOccurrences(arr) {
-  let res = arr.split(" ");
-  let count = " ";
+let str = "I took a shower. I need a friend. Noone like this sticky guy.";
 
-  for (let char of res) {
-    if (char.length > count.length) {
-      count = char;
+function TextWord(str) {
+  let TotalText = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === " ") {
+      TotalText++;
     }
   }
-  //   for (let i = 0; i < res.length; i++) {
-  //     if (res[i].length > count.length) {
-  //       count = res[i];
-  //     }
-  //   }
-  return count;
+  return TotalText + 1;
 }
 
-// let str = arr.includes
-// let arr = "hello engineer how are you ABCD";
-// let x = "";
-console.log(countOccurrences(arr));
-
-// Event loop working good
-
-console.log("Start");
-
-setTimeout(() => {
-  console.log("setTimeout");
-}, 0);
-
-Promise.resolve().then(() => {
-  console.log("Promise");
-});
-
-console.log("End");
+console.log("number of words:", TextWord(str));
