@@ -1,13 +1,15 @@
-let str = "I took a shower. I need a friend. Noone like this sticky guy.";
+function findLongestWord(str) {
+  const words = str.split(" ");
+  let longest = "";
 
-function TextWord(str) {
-  let TotalText = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === " ") {
-      TotalText++;
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longest.length) {
+      longest = words[i];
     }
   }
-  return TotalText + 1;
+
+  return longest;
 }
 
-console.log("number of words:", TextWord(str));
+const sentence = "I am learning Programming to become a programmer";
+console.log(findLongestWord(sentence));
