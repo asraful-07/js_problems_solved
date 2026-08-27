@@ -11,5 +11,6 @@ function findLongestWord(str) {
   return longest;
 }
 
-const sentence = "I am learning Programming.I enjoy for everything";
+const sentence =
+  "I am learning Programming.I enjoy for everything, programming is good learning.";
 console.log(findLongestWord(sentence));
