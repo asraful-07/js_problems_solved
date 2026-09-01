@@ -1,15 +1,18 @@
-function findLongestWord(str) {
-  const words = str.split(" ");
-  let longest = "";
+const arr = [6, "six", true, false, true, true, false, true, 9, "hello"];
 
-  for (let i = 0; i < words.length; i++) {
-    if (words[i].length > longest.length) {
-      longest = words[i];
-    }
+function show(array) {
+  if (!Array.isArray(array)) {
+    return;
   }
 
-  return longest;
+  let count = 0;
+  for (let item of array) {
+    if (typeof item === "boolean") {
+      count++;
+    }
+  }
+  return count;
 }
 
-const sentence = "I am learning Programming.I enjoy for everything";
-console.log(findLongestWord(sentence));
+const result = show(arr);
+console.log(result);
