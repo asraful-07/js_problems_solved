@@ -1,4 +1,4 @@
-const arr = [6, "six", true, 9, "hello"];
+const arr = [6, "six", true, false, true, true, false, true, 9, "hello"];
 
 function show(array) {
   if (!Array.isArray(array)) {
