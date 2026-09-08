@@ -7,8 +7,6 @@ const arr = [
   true,
   false,
   true,
-  10000,
-  46000,
   9,
   "hello",
 ];
