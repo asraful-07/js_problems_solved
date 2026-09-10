@@ -15,4 +15,4 @@ function show(array) {
 }
 
 const result = show(arr);
-console.log(result);
+console.log("Result", result);
