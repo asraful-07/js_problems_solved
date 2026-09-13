@@ -13,6 +13,3 @@ function show(array) {
   }
   return count;
 }
-
-const result = show(arr);
-console.log("Result", result);
