@@ -1,15 +1,13 @@
-const arr = [6, "six", true, false, true];
-
-function show(array) {
-  if (!Array.isArray(array)) {
-    return;
-  }
-
+function countVowels(str) {
+  const vowels = "aeiouAEIOU";
   let count = 0;
-  for (let item of array) {
-    if (typeof item === "boolean") {
+
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
       count++;
     }
   }
   return count;
 }
+
+console.log(countVowels("Bangladeshi"));
