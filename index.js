@@ -10,5 +10,5 @@ function countVowels(str) {
   return count;
 }
 
-const word = countVowels("fruits is health for good");
-console.log(word);
+// const word = countVowels("fruits is health for good");
+// console.log(word);
