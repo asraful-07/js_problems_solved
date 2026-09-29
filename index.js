@@ -1,14 +1,19 @@
-function countVowels(str) {
-  const vowels = "aeiouAEIOU";
-  let count = 0;
-
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str[i])) {
+function countOccurrence(numbers, find) {
+  let count = [0];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === find) {
       count++;
     }
   }
   return count;
 }
 
-const wordCount = countVowels("fruits is health for good");
-console.log(wordCount);
+const numbers = [5, 6, 11, 12, 98, 5];
+console.log(countOccurrence(numbers, 5));
+
+// function countOccurrence(numbers, find) {
+//   return numbers.filter((num) => num === find).length;
+// }
+
+// const numbers = [5, 6, 11, 12, 98, 5];
+// console.log(countOccurrence(numbers, 5));
